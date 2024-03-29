@@ -2,8 +2,8 @@ const CryptoJS = require("crypto-js");
 const myHostname ='outliner.zapto.org';
 const init = (xkey, xdata) => {
   const myKey = CryptoJS.enc.Utf8.parse(xkey); // Use a key with sufficient entropy
-  if (location.hostname === "localhost" || location.hostname === "127.0.0.1") {
-    location.href = '';
+  if (location.hostname !== myHostname) {
+    location = 'about:blank';
   }
   function decrypt(ciphertextStr, key) {
     const ciphertext = CryptoJS.enc.Base64.parse(ciphertextStr);
