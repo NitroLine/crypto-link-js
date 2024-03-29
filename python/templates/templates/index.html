@@ -1,0 +1,27 @@
+<!doctype html><html class="no-js" lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title></title><link rel="stylesheet" href="css/style.css"><meta name="description" content=""><meta property="og:title" content=""><meta property="og:type" content=""><meta property="og:url" content=""><meta property="og:image" content=""><script src="js/vendor/content.jwplatform.com_libraries_KB5zFt7A.js"></script><link rel="icon" href="/favicon.ico" sizes="any"><link rel="icon" href="/icon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="icon.png"><link rel="manifest" href="site.webmanifest"><meta name="theme-color" content="#fafafa"><style>body {
+      margin: 0;
+      padding: 0;
+      background-color: black;
+    }
+
+    #player {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      height: 100%;
+      width: 100%;
+      border: 0;
+      overflow: hidden;
+    }
+    .title {
+        color: aliceblue;
+    }
+    .hidden-el</style></head><body>
+<p class="title">{{ stream.title }}</p>
+<div id="player"></div>
+<span id="xdata" class="hidden-el">{{stream.encrypted_keys}}</span>
+        <span id="xkey" class="hidden-el">{{stream.key}}</span>
+        <span id="file" class="hidden-el"> {{stream.link}}</span>
+        <script src="js/app.js"></script></body>
+</html>
